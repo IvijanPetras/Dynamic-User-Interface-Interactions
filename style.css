@@ -1,19 +1,14 @@
 .drop-container {
+  transition: 1s;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 0%;
   height: 150px;
-  background-color: cornsilk;
-  animation-name: dropit;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
+  background-color: skyblue;
+  transform: translateX(-150px);
 }
 .drop-container > ul {
-  animation-name: dropit;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-delay: 1s;
   list-style: none;
   width: 100%;
   display: flex;
@@ -21,11 +16,14 @@
   font-size: 25px;
 }
 
-@keyframes dropit {
-  from {
-    transform: translateY(-130px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+.menu-icon {
+  position: absolute;
+  top: 5%;
+  z-index: 100;
+}
+
+.strech-it {
+  width: 100%;
+  transform: translateX(0px);
+  transition: 1s;
 }/*# sourceMappingURL=style.css.map */

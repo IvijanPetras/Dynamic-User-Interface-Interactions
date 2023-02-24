@@ -63,18 +63,4 @@
     width: 45%;
     height: 100vh;
   }
-}
-body {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-frame {
-  border: 1px solid red;
-  max-height: 30vh;
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr;
-  align-items: center;
 }/*# sourceMappingURL=style.css.map */

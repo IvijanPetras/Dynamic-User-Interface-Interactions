@@ -24,6 +24,7 @@
   z-index: 100;
   > &:hover {
     scale: 1.05;
+    cursor: pointer;
   }
   > &:active {
     scale: 0.95;
@@ -38,10 +39,6 @@
 
 // mobile menu ---------------------------
 
-.strech-it-mobile{
-    width: 100%;
-}
-
 @media screen and (max-width: 480px) {
   .drop-container {
     font-size: 16px;
@@ -49,14 +46,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 0%;
     height: 150px;
-    background-color: skyblue;
+    background-color: rgb(235, 135, 212);
     > ul {
       list-style: none;
       width: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 70%;
+      > li {
+        padding-bottom: 20px;
+      }
     }
   }
+  .strech-it {
+    width: 45%;
+    height: 100vh;
+  }
+}
+// image slider ---------------------------
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-frame{
+    border: 1px solid red;
+    max-height: 30vh;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    align-items: center;
 }

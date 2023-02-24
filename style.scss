@@ -1,13 +1,13 @@
 // dropdown menu --------------------
 
 .drop-container {
-transition: 1s;
+  transition: 1s;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 0%;
   height: 150px;
-  background-color:skyblue;
+  background-color: skyblue;
   transform: translateX(-150px);
   > ul {
     list-style: none;
@@ -15,17 +15,48 @@ transition: 1s;
     display: flex;
     justify-content: space-evenly;
     font-size: 25px;
-}
-}
-
-.menu-icon{
-        position:absolute;
-        top: 5%;
-        z-index: 100;
+  }
 }
 
-.strech-it{
+.menu-icon {
+  position: absolute;
+  top: 5%;
+  z-index: 100;
+  > &:hover {
+    scale: 1.05;
+  }
+  > &:active {
+    scale: 0.95;
+  }
+}
+
+.strech-it {
   width: 100%;
   transform: translateX(0px);
   transition: 1s;
+}
+
+// mobile menu ---------------------------
+
+.strech-it-mobile{
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .drop-container {
+    font-size: 16px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    height: 150px;
+    background-color: skyblue;
+    > ul {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }

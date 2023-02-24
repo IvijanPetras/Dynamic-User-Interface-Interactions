@@ -21,9 +21,38 @@
   top: 5%;
   z-index: 100;
 }
+.menu-icon:hover {
+  scale: 1.05;
+}
+.menu-icon:active {
+  scale: 0.95;
+}
 
 .strech-it {
   width: 100%;
   transform: translateX(0px);
   transition: 1s;
+}
+
+.strech-it-mobile {
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .drop-container {
+    font-size: 16px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    height: 150px;
+    background-color: skyblue;
+  }
+  .drop-container > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=style.css.map */

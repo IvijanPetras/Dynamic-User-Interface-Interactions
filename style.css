@@ -1,7 +1,3 @@
-:root {
-  --pics-number: 6;
-}
-
 .drop-container {
   transition: 1s;
   display: flex;
@@ -69,17 +65,58 @@
   }
 }
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .carousel-frame {
   height: 600px;
   width: 800px;
   border: 4px solid red;
-  display: grid;
-  grid-row: var(--pics-number);
-  grid-column: repeat(var(--pics-number), 1fr);
+}
+
+.carousel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   overflow: hidden;
+}
+.carousel > img {
+  min-width: 100%;
+  height: 600px;
+}
+
+.dot-container {
+  font-size: 50px;
+  color: lime;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  background-color: rgba(103, 43, 43, 0.597);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.dot:hover {
+  cursor: pointer;
+  background-color: rgba(103, 43, 43, 0.8);
+}
+
+.prev, .next {
+  margin-top: 20%;
+  margin-left: 15px;
+  position: fixed;
+  color: cyan;
+  font-size: 30px;
+  background-color: rgba(219, 166, 97, 0.212);
+}
+
+.next {
+  margin-left: 45%;
 }/*# sourceMappingURL=style.css.map */

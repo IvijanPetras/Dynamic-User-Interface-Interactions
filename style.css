@@ -64,25 +64,31 @@
     height: 100vh;
   }
 }
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 
 .carousel-frame {
   height: 600px;
   width: 800px;
   border: 4px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
+  width: inherit;
 }
 .carousel > img {
   min-width: 100%;
@@ -90,15 +96,19 @@ body {
 }
 
 .dot-container {
+  margin-top: 30%;
+  width: 20%;
+  z-index: 101;
+  position: fixed;
   font-size: 50px;
   color: lime;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .dot {
-  background-color: rgba(103, 43, 43, 0.597);
+  background-color: rgba(24, 255, 24, 0.597);
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -108,15 +118,17 @@ body {
   background-color: rgba(103, 43, 43, 0.8);
 }
 
-.prev, .next {
-  margin-top: 20%;
-  margin-left: 15px;
+.prev-next-container {
   position: fixed;
-  color: cyan;
-  font-size: 30px;
-  background-color: rgba(219, 166, 97, 0.212);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.next {
-  margin-left: 45%;
+.prev, .next {
+  z-index: 100;
+  color: whitesmoke;
+  font-size: 30px;
+  background-color: rgba(219, 166, 97, 0.212);
 }/*# sourceMappingURL=style.css.map */

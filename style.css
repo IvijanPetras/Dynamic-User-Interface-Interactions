@@ -1,3 +1,7 @@
+:root {
+  --pics-move: 0px;
+}
+
 .drop-container {
   transition: 1s;
   display: flex;
@@ -89,6 +93,7 @@ body {
 .carousel {
   display: flex;
   width: inherit;
+  transform: translateX(var(--pics-move));
 }
 .carousel > img {
   min-width: 100%;
@@ -98,7 +103,7 @@ body {
 .dot-container {
   margin-top: 30%;
   width: 20%;
-  z-index: 101;
+  z-index: 10;
   position: fixed;
   font-size: 50px;
   color: lime;
@@ -124,10 +129,10 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 9;
 }
 
 .prev, .next {
-  z-index: 100;
   color: whitesmoke;
   font-size: 30px;
   background-color: rgba(219, 166, 97, 0.212);

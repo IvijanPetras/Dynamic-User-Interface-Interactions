@@ -13,29 +13,30 @@ window.addEventListener("DOMContentLoaded", () => {
     let nextBtn = document.querySelector('.next');
     let dotContainer = document.querySelector('.dot-container');
     let move = 1;
-
-    function activeSlide(){
-       let imgs = [...carousel.children]
-       let activeImg = imgs.filter(img => img.classList.contains('active'));
-       return imgs.indexOf(...activeImg) + 1;
-    };
-
-    console.log(activeSlide())
-
+    let imgs = [...carousel.children]
+    
+    
     function nextSlide(){
-
-        carousel.style.setProperty('--pics-move', `${-800 * activeSlide()}px`);
-        move++;
-       
+        const activeImg = [...carousel.children].filter(img => img.classList.contains('active'));
+        let activeImage = imgs.indexOf(...activeImg);
+        carousel.style.setProperty('--pics-move', `${-800 * (activeImage + 1)}px`);
+        activeImg[0].classList.remove('active');
+        imgs[activeImage + 1].classList.add('active');
+        console.log(imgs)
     };
 
     function prevSlide(){
-        move = 0;
-        console.log(move)
-        carousel.style.setProperty('--pics-move', `${800 * move}px`);
+        const activeImg = [...carousel.children].filter(img => img.classList.contains('active'));
+        let activeImage = imgs.indexOf(...activeImg);
+        activeImg[0].classList.remove('active');
+        imgs[activeImage - 1].classList.add('active');
+        carousel.style.setProperty('--pics-move', `${800 * (activeImage - 1)}px`);
+        console.log(activeImage);
     };
 
-    nextBtn.addEventListener('click', nextSlide);
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+    });
     prevBtn.addEventListener('click', prevSlide);
 
 });

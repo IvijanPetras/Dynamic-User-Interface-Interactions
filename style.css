@@ -88,6 +88,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .carousel {
@@ -113,14 +114,18 @@ body {
 }
 
 .dot {
-  background-color: rgba(24, 255, 24, 0.597);
+  background-color: rgba(57, 72, 123, 0.4);
   height: 15px;
   width: 15px;
   border-radius: 50%;
 }
 .dot:hover {
   cursor: pointer;
-  background-color: rgba(103, 43, 43, 0.8);
+  background-color: rgba(79, 88, 119, 0.8);
+}
+
+.dot-active {
+  background-color: rgba(207, 212, 229, 0.9);
 }
 
 .prev-next-container {
@@ -132,8 +137,14 @@ body {
   z-index: 9;
 }
 
-.prev, .next {
+.prev,
+.next {
   color: whitesmoke;
   font-size: 30px;
-  background-color: rgba(219, 166, 97, 0.212);
+  background-color: rgba(82, 107, 191, 0.2);
+}
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+  background-color: rgba(79, 88, 119, 0.8);
 }/*# sourceMappingURL=style.css.map */

@@ -74,8 +74,7 @@
 }
 // image slider ---------------------------
 
-
-html{
+html {
   height: 100%;
 }
 body {
@@ -93,10 +92,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
- 
+  overflow: hidden;
 }
 
-.carousel{
+.carousel {
   display: flex;
   width: inherit;
   transform: translateX(var(--pics-move));
@@ -118,29 +117,37 @@ body {
   justify-content: space-evenly;
 }
 
-.dot{
-  background-color: rgba(24, 255, 24, 0.597);
+.dot {
+  background-color: rgba(57, 72, 123, 0.4);
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  > &:hover{
+  > &:hover {
     cursor: pointer;
-    background-color: rgba(103, 43, 43, 0.8);  
+    background-color: rgba(79, 88, 119, 0.8);
   }
 }
 
-.prev-next-container{
+.dot-active {
+  background-color: rgba(207, 212, 229, 0.9);
+}
+
+.prev-next-container {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   z-index: 9;
 }
 
-.prev, .next { 
+.prev,
+.next {
   color: whitesmoke;
   font-size: 30px;
-  background-color: rgba(219, 166, 97, 0.212);
+  background-color: rgba(82, 107, 191, 0.2);
+  > &:hover{
+    cursor: pointer;
+    background-color: rgba(79, 88, 119, 0.8);
+  }
 }
-
